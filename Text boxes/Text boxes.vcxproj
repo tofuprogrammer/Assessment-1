@@ -156,6 +156,9 @@
   <ItemGroup>
     <ClCompile Include="Text boxes.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include (Text boxes).hpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,5 +1,4 @@
-#include <iostream> // Allows for input and output such as cout and cin
-#include <string> // Allows strings to be used
+#include "Include (Player details).hpp"
 
 int main() // The code begins executing from here
 {
