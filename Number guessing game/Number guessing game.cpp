@@ -11,10 +11,10 @@ int main()
         std::cin >> user_guess;
         if (std::cin.fail() || user_guess > 100 || user_guess < 1)
         {
-            std::cerr << "Invalid input. You must enter a number between 1 and 100. The program will now exit..." << '\n';
+            std::cerr << "Invalid input. You must enter a number between 1 and 100." << '\n';
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            return 1;
+            continue;
         }
         int difference = abs(user_guess - random_number);
 
