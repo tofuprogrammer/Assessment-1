@@ -2,6 +2,11 @@
 #include <string>
 #include <vector>
 
+class PlayerInventory
+{
+    
+};
+
 int main()
 {
     int inventorySize;
@@ -15,8 +20,9 @@ int main()
         std::cout << "Error: Invalid input. Enter a number between 1 and 16: ";
         std::cin >> inventorySize;
     }
-    std::cout << inventorySize;
-    std::vector<std::string> arr(inventorySize);
+    std::vector<std::string> playerInventory(inventorySize);
     std::cout << "Initialised inventory with " << inventorySize << " slots." << '\n';
     std::cout << "Type \"help\" for a list of all commands" << '\n';
+    std::string userInput;
+    std::cin >> userInput;
 }
