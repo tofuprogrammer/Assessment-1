@@ -15,7 +15,7 @@ int main()
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         return 1;
     }
-    // Creates variables which store the result of each operation on the number input by the user
+    // Creates variables that store the result of each operation on the number input by the user
     double negation = number * (-1);
     double absolute_value = abs(number);
     double square = pow(number, 2);
