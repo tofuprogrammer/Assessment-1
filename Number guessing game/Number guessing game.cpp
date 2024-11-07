@@ -1,4 +1,7 @@
-#include "Include (Number guessing game).hpp"
+#include <random>
+#include <iostream>
+
+#include "Functions (Number guessing game).hpp"
 
 int main()
 {

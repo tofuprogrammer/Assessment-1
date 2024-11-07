@@ -1,4 +1,7 @@
-#include "Include (Text casing).hpp"
+#include <iostream>
+#include <string>
+
+#include "Functions (Text casing).hpp"
 
 int main()
 {

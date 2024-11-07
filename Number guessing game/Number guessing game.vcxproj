@@ -157,7 +157,7 @@
     <ClCompile Include="Number guessing game.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include (Number guessing game).hpp" />
+    <ClInclude Include="Functions (Number guessing game).hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

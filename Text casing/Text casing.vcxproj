@@ -157,8 +157,7 @@
     <ClCompile Include="Text casing.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Functions.hpp" />
-    <ClInclude Include="Include (Text casing).hpp" />
+    <ClInclude Include="Functions (Text casing).hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
