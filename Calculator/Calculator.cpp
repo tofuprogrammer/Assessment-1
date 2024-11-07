@@ -6,7 +6,7 @@ int main()
 {
     double number;
     std::cout << "Enter a number: ";
-    std::cin >> number;
+    std::cin >> number; // Assigns the user's input to the double declared on line 7 (number).
 
     if (std::cin.fail()) // Clears user's input and prompts user for input again if invalid (not a number)
     {
@@ -15,6 +15,7 @@ int main()
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         return 1;
     }
+
     // Creates variables that store the result of each operation on the number input by the user
     double negation = number * (-1);
     double absolute_value = abs(number);
@@ -24,11 +25,13 @@ int main()
     double floor = std::floor(number);
     double ceiling = std::ceil(number);
     double rounded = std::round(number);
+
     std::cout << "The number you specified is " << number << '\n'; // Outputs the number input by the user
     if (number < 0) // Checks if the number the user input is negative
     {
         std::cout << "This is a negative number, so the absolute value of " << number << " (" << absolute_value << ") will be used to calculate the square root" << '\n';
     }
+
     // Outputs results
     std::cout << "The negation value of " << number << " is " << negation << '\n';
     std::cout << "The absolute value of " << number << " is " << absolute_value << '\n';
