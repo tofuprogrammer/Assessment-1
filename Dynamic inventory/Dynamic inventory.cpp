@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 
+#include "Functions (Dynamic inventory).hpp"
+
 class PlayerInventory
 {
     
@@ -25,4 +27,6 @@ int main()
     std::cout << "Type \"help\" for a list of all commands" << '\n';
     std::string userInput;
     std::cin >> userInput;
+    if (userInput == "help")
+        helpUser();
 }
