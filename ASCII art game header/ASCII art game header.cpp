@@ -2,6 +2,7 @@
 
 int main() // Code begins executing from here
 {
+    // Outputs boat image
     std::cout << "                 |" << '\n';
     std::cout << "                /|\\" << '\n';
     std::cout << "               / | \\    a boat" << '\n';
