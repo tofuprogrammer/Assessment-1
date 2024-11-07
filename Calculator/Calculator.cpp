@@ -18,10 +18,10 @@ int main()
 
     // Creates variables that store the result of each operation on the number input by the user.
     double negation = number * (-1);
-    double absolute_value = abs(number);
+    double absoluteValue = abs(number);
     double square = pow(number, 2);
     double cube = pow(number, 3);
-    double root = sqrt(absolute_value);
+    double root = sqrt(absoluteValue);
     double floor = std::floor(number);
     double ceiling = std::ceil(number);
     double rounded = std::round(number);
@@ -29,12 +29,12 @@ int main()
     std::cout << "The number you specified is " << number << '\n'; // Outputs the number input by the user.
     if (number < 0) // Checks if the number the user input is negative.
     {
-        std::cout << "This is a negative number, so the absolute value of " << number << " (" << absolute_value << ") will be used to calculate the square root." << '\n';
+        std::cout << "This is a negative number, so the absolute value of " << number << " (" << absoluteValue << ") will be used to calculate the square root." << '\n';
     }
 
     // Outputs results.
     std::cout << "The negation value of " << number << " is " << negation << '\n';
-    std::cout << "The absolute value of " << number << " is " << absolute_value << '\n';
+    std::cout << "The absolute value of " << number << " is " << absoluteValue << '\n';
     std::cout << "The square of " << number << " is " << square << '\n';
     std::cout << "The cube of " << number << " is " << cube << '\n';
     std::cout << "The root of " << number << " is " << root << '\n';
