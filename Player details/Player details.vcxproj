@@ -156,9 +156,6 @@
   <ItemGroup>
     <ClCompile Include="Player details.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Include (Player details).hpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

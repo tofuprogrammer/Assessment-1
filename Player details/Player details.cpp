@@ -1,4 +1,5 @@
-#include "Include (Player details).hpp"
+#include <iostream>
+#include <string>
 
 int main() // The code begins executing from here
 {

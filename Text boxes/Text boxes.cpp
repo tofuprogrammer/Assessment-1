@@ -1,4 +1,5 @@
-#include "Include (Text boxes).hpp"
+#include <iostream>
+#include <string>
 
 void text_box(const std::string& input_text)
 {
