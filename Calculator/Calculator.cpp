@@ -7,11 +7,11 @@ int main()
     double number;
     std::cout << "Enter a number: ";
     std::cin >> number;
-    
+
     if (std::cin.fail()) // Clears user's input and prompts user for input again if invalid (not a number)
     {
-        std::cerr << "Invalid input. You must enter a number. The program will now exit..." << '\n';
-        std::cin.clear(); 
+        std::cerr << "Invalid input. You must enter a number. The program will now exit...";
+        std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         return 1;
     }
