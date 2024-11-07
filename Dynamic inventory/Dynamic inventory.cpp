@@ -29,4 +29,6 @@ int main()
     std::cin >> userInput;
     if (userInput == "help")
         helpUser();
+    if (userInput == "exit")
+        exitProgram();
 }

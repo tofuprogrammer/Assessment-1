@@ -15,8 +15,12 @@ inline void helpUser()
     std::cout << "clear: Clears your inventory." << '\n';
 }
 
+inline int exitProgram()
+{
+    return 0;
+}
 inline void viewInventorySlot()
 {
     std::cout << "Inventory slot " << inventorySlotNumber << " details:" << '\n';
-    std::cout << "Name: " << playerInventory.itemName[inventorySlotNumber] << '\n';
+    std::cout << "Name: " << playerInventory[inventorySlotNumber].itemName << '\n';
 }
