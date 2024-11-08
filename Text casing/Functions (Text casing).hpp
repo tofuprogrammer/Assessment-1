@@ -64,8 +64,16 @@ inline std::string alternatingCase(const std::string& userInput)
     {
         if (std::isalpha(c))
         {
-            c = uppercase ? std::toupper(c) : std::tolower(c); // If uppercase is true, the character is made to be uppercase.
+            // If uppercase is true, the character is made to be uppercase.
             // If it's false, the character is set to lowercase.
+            if (uppercase == true)
+            {
+                c = std::toupper(c);
+            }
+            else
+            {
+                c = std::tolower(c);
+            }
             uppercase = !uppercase; // Inverts the value of uppercase.
         }
     }
