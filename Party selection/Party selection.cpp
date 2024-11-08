@@ -103,4 +103,66 @@ int main()
     items[itemsBought[0]].itemStock--;
     std::cout << players[0].playerName << " just bought a " << items[itemsBought[0]].itemName << '\n';
     std::cout << "The party now has " << partyGold << " gold.\n";
+	std::cout << '\n';
+	
+	std::cout << players[1].playerName << ", enter the code for the item you want to buy: ";
+	std::cin >> itemCode;
+	while (itemCode < 1 || itemCode > 7 || std::cin.fail())
+	{
+		std::cerr << "Invalid item code" << '\n';
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		std::cout << players[1].playerName << ", enter the code for the item you want to buy: ";
+		std::cin >> itemCode;
+	}
+
+	while (!isItemAffordable(items[itemCode - 1].itemCost, partyGold) || !isItemAvailable(items[itemCode - 1].itemStock))
+	{
+		if (!isItemAffordable(items[itemCode - 1].itemCost, partyGold))
+		{
+			std::cerr << "You can't afford that item" << '\n';
+		}
+		if (!isItemAvailable(items[itemCode - 1].itemStock))
+		{
+			std::cerr << "That item is out of stock" << '\n';
+		}
+		std::cout << players[1].playerName << ", enter the code for the item you want to buy: ";
+		std::cin >> itemCode;
+	}
+	itemsBought[1] = itemCode - 1;
+	partyGold -= items[itemsBought[1]].itemCost;
+	items[itemsBought[1]].itemStock--;
+	std::cout << players[1].playerName << " just bought a " << items[itemsBought[1]].itemName << '\n';
+	std::cout << "The party now has " << partyGold << " gold.\n";
+	std::cout << '\n';
+
+	std::cout << players[2].playerName << ", enter the code for the item you want to buy: ";
+	std::cin >> itemCode;
+	while (itemCode < 1 || itemCode > 7 || std::cin.fail())
+	{
+		std::cerr << "Invalid item code" << '\n';
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		std::cout << players[2].playerName << ", enter the code for the item you want to buy: ";
+		std::cin >> itemCode;
+	}
+
+	while (!isItemAffordable(items[itemCode - 1].itemCost, partyGold) || !isItemAvailable(items[itemCode - 1].itemStock))
+	{
+		if (!isItemAffordable(items[itemCode - 1].itemCost, partyGold))
+		{
+			std::cerr << "You can't afford that item" << '\n';
+		}
+		if (!isItemAvailable(items[itemCode - 1].itemStock))
+		{
+			std::cerr << "That item is out of stock" << '\n';
+		}
+		std::cout << players[2].playerName << ", enter the code for the item you want to buy: ";
+		std::cin >> itemCode;
+	}
+	itemsBought[2] = itemCode - 1;
+	partyGold -= items[itemsBought[2]].itemCost;
+	items[itemsBought[2]].itemStock--;
+	std::cout << players[2].playerName << " just bought a " << items[itemsBought[2]].itemName << '\n';
+	std::cout << "The party now has " << partyGold << " gold.\n";
 }

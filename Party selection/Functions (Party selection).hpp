@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-bool isItemAffordable(int itemCost, int partyGold)
+inline bool isItemAffordable(int itemCost, int partyGold)
 {
 	if (partyGold >= itemCost)
 	{
@@ -14,7 +14,7 @@ bool isItemAffordable(int itemCost, int partyGold)
 		return false;
 	}
 }
-bool isItemAvailable(int itemStock)
+inline bool isItemAvailable(int itemStock)
 {
 	if (itemStock > 0)
 	{
