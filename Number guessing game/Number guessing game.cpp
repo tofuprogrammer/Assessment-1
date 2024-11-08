@@ -5,23 +5,27 @@
 
 int main()
 {
-    const int random_number = random(1,100);
-    std::cout << "The random number is: " << random_number << '\n';
-    int user_guess = 0;
-    while (user_guess != random_number)
+    const int randomNumber = random(1,100);
+    std::cout << "The random number is: " << randomNumber << '\n';
+    int userGuess = 0; // Initialize to 0 (outside range of random numbers) to avoid errors.
+    while (userGuess != randomNumber) // Always true on the first pass. Loop ends if the user guesses the correct number.
     {
         std::cout << "Enter a number between 1 and 100: ";
-        std::cin >> user_guess;
-        if (std::cin.fail() || user_guess > 100 || user_guess < 1)
-        {
-            std::cerr << "Invalid input. You must enter a number between 1 and 100." << '\n';
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            continue;
-        }
-        int difference = abs(user_guess - random_number);
+        std::cin >> userGuess;
 
-        if (user_guess == random_number)
+        // Checks if the user's guess isn't an integer, or is an integer but is outside the possible range of random numbers.
+        if (std::cin.fail() || userGuess > 100 || userGuess < 1)
+        {
+            std::cerr << "Invalid input. You must enter a number between 1 and 100." << '\n'; // Outputs an error message.
+            std::cin.clear(); // Clears the error.
+            std::cin.ignore(1000, '\n'); // Flushes the input buffer.
+            continue; // Skips the rest of the loop.
+        }
+        // Calculates the difference between the user's guess and the random number.
+        int difference = abs(userGuess - randomNumber);
+
+        // Compares the user's guess to the random number.
+        if (userGuess == randomNumber)
         {
             std::cout << "You guessed the number correctly!";
         }
